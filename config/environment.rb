@@ -1,3 +1,8 @@
+require 'sinatra/cross-origin'
+configure do
+  enable :cross_origin
+end
+
 require 'json'
 require 'rubygems'
 require 'bundler/setup'
@@ -9,7 +14,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/contrib/all' # Requires cookies, among other things
 
-require 'pry'
+require 'pry' if development?
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
