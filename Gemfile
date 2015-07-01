@@ -1,4 +1,7 @@
 # A sample Gemfile
+
+gem "sinatra-cross_origin", "~> 0.3.1"
+
 source "https://rubygems.org"
 gem 'json'
 gem 'rake'

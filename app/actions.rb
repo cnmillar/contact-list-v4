@@ -7,6 +7,10 @@ get '/contacts' do
 	@contacts = Contact.all.to_json
 end
 
+get '/contacts/search' do
+	@contacts = Contact.where("first_name = ? OR last_name = ? OR email = ? OR email = ?", params[:search_term], params[:search_term], params[:search_term], params[:search_term]).to_json
+end
+
 get '/contact/:id' do
 	@contact = Contact.find(params[:id]).to_json
 end
@@ -18,4 +22,9 @@ post '/contact' do
 	else
 		errors.add(:base, "Unsuccessfully added contact")
 	end
+end
+
+delete '/contact/:id/delete' do
+	@contact = Contact.find(params[:id])
+	@contact.destroy
 end
