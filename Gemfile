@@ -1,6 +1,5 @@
 # A sample Gemfile
 
-gem "sinatra-cross_origin", "~> 0.3.1"
 
 source "https://rubygems.org"
 gem 'json'
@@ -21,5 +20,6 @@ group :development, :test do
 end
 
 group :production do
+	gem "sinatra-cross_origin", "~> 0.3.1"
   gem 'pg'
 end
