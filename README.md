@@ -1,9 +1,9 @@
 Contact List App in Sinatra
 =============
 
-######As part of the Lighthouse Labs curriculum
-######Deployed on Heroku 
-######http://contact-list-lighthouse.herokuapp.com/
+As part of the Lighthouse Labs curriculum  
+Deployed on Heroku  
+http://contact-list-lighthouse.herokuapp.com/
 
 ## Getting Started
 
